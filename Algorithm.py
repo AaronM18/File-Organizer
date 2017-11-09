@@ -115,20 +115,33 @@ def display_dsList(ds_list):
 
 
 #-----------------------------  Update Files  ----------------------------------
-def update_file(list, file_name):
+def update_file(dir_list, file_name):
 	path = os.path.dirname(os.path.abspath(__file__)) # obtiene la direccion del .py
-	path = path + '/Data' + file_name
+	path = path + '/Data/' + file_name
+	
 	
 	try:
-		open()
+		f = open(path, 'w')
+
+		for line in dir_list:
+			f.write(line + '\n')
+
+		print('\n\t' + file_name + ' fue actualizado...')
+
+		f.close()
+		return
 	except:
-		print('')
+		print('\n\tERROR: ' + file_name + ' no pudo ser actualizado...')
+
+		return
 #-----------------------------  ADD SRC  -----------------------------------
 def add_src(sc_list):
 
 	new_path = input('\n Introduce la nueva ruta:')
 
-	sc_list.append(new_path)
+	if os.path.isdir(new_path):
+		sc_list.append(new_path)
+		update_file(sc_list, 'sc.cfg')
 
 	return
 
@@ -137,11 +150,14 @@ def add_ds(ds_list):
 
 	rute = input('\n Introduce la nueva ruta:')
 
-	words = input('\n Introduce las palabras clave')
+	if os.path.isdir(rute):
+		words = input('\n Introduce las palabras clave')
 
-	new_path = rute + '||' + words
+		new_path = rute + '||' + words
 
-	ds_list.append(new_path)
+		ds_list.append(new_path)
+
+		update_file(ds_list, 'ds.cfg')
 
 	return
 
@@ -160,6 +176,8 @@ def main():
 	#display_scList(sc_list)
 	#display_dsList(ds_list)
 	#search_files(sc_list, ds_list)
+	#add_src(sc_list)
+	#add_ds(ds_list)
 #---------------------------------
 
 main()
