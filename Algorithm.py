@@ -89,7 +89,7 @@ def search_files(sc_list, ds_list):
 def display_scList(sc_list):
 	i = 1
 
-	print('\n  Lista de rutas origen:')
+	print('\n  Origin folder list:')
 
 	for rute in sc_list:
 		print('\n\t' + str(i) + '. ' + rute)
@@ -101,13 +101,13 @@ def display_scList(sc_list):
 def display_dsList(ds_list):
 	i = 1
 
-	print('\n  Lista de rutas destino:')
+	print('\n  Destiny folder list:')
 
 	for line in ds_list:
 		rute_kw = line.split('||')
 
 		print('\n\t' + str(i) + '. ' + rute_kw[0])
-		print('\t  Palabras clave: ' + rute_kw[1])
+		print('\t  Keywords: ' + rute_kw[1])
 
 		i+=1
 
@@ -126,18 +126,19 @@ def update_file(dir_list, file_name):
 		for line in dir_list:
 			f.write(line + '\n')
 
-		print('\n\t' + file_name + ' fue actualizado...')
+		print('\n\t' + file_name + ' was updated...')
 
 		f.close()
 		return
 	except:
-		print('\n\tERROR: ' + file_name + ' no pudo ser actualizado...')
+		print('\n\tERROR: ' + file_name + ' couldn''t be updated...')
 
 		return
 #-----------------------------  ADD SRC  -----------------------------------
 def add_src(sc_list):
 
-	new_path = input('\n Introduce la nueva ruta:')
+	print('\n Input new origin folder:')
+	new_path = input('\n\t>> ')
 
 	if os.path.isdir(new_path):
 		sc_list.append(new_path)
@@ -148,10 +149,12 @@ def add_src(sc_list):
 #-----------------------------  ADD DS  -----------------------------------
 def add_ds(ds_list):
 
-	rute = input('\n Introduce la nueva ruta:')
+	print('\n Input new origin folder:')
+	rute = input('\n\t>> ')
 
 	if os.path.isdir(rute):
-		words = input('\n Introduce las palabras clave')
+		print('\n Input keywords:')
+		words = input('\n\t>> ')
 
 		new_path = rute + '||' + words
 
@@ -175,7 +178,9 @@ def main():
 	# llamada  afunciones
 	#display_scList(sc_list)
 	#display_dsList(ds_list)
+
 	#search_files(sc_list, ds_list)
+
 	#add_src(sc_list)
 	#add_ds(ds_list)
 #---------------------------------

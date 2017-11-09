@@ -3,7 +3,7 @@
 ------------------------------------------   FILE ORGANIZER  ------------------------------------------
 
 
-Funcionamiento:
+Funcionamiento General:
 	
 	En la carpeta data se pueden encontrar 2 archivos .cfg:
 
@@ -23,3 +23,19 @@ Funcionamiento:
 			C:\Users\oscar\Documents\||oscar,clave0,clave9
 
 					ruta||palabra1,palabra2,palabra3
+
+
+Agregar:
+
+	->SC: se introduce una nueva ruta de donde se van a mover archivos
+
+		EJEMPLO: 
+			>> C:\Users\Usser\Descargas
+	
+	->DS: se introduce una nueva ruta de donde se van a mover archivos, despues se pide enlistar las
+		palabras clave
+
+		EJEMPLO:
+			>> C:\Users\Usser\Descargas
+			>> clave1,calve2,clave3
+
