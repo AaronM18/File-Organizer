@@ -163,6 +163,40 @@ def add_ds(ds_list):
 		update_file(ds_list, 'ds.cfg')
 
 	return
+#-----------------------------  Delete  -----------------------------------
+def del_sc(sc_list):
+
+	display_scList(sc_list)
+
+	print('\n Select the number of element to delete:')
+	e = input('\n\t>> ')
+
+	if str.isdigit(e):
+		sc_list.remove(sc_list[int(e)-1])
+
+		print('\n\tElement deleted...')
+		update_file(sc_list, 'sc.cfg')
+	else:
+		print('\n\tProcess stoped')
+
+	return
+
+def del_ds(ds_list):
+
+	display_scList(ds_list)
+
+	print('\n Select the number of element to delete:')
+	e = input('\n\t>> ')
+
+	if str.isdigit(e):
+		ds_list.remove(ds_list[int(e)-1])
+
+		print('\n\tElement deleted...')
+		update_file(ds_list, 'ds.cfg')
+	else:
+		print('\n\tProcess stoped')
+
+	return
 
 #-----------------------------  Main -------------------------------
 def main():
@@ -183,6 +217,9 @@ def main():
 
 	#add_src(sc_list)
 	#add_ds(ds_list)
+
+	#del_sc(sc_list)
+	#del_ds(ds_list)
 #---------------------------------
 
 main()
