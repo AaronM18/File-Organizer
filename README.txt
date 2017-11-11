@@ -39,3 +39,10 @@ Agregar:
 			>> C:\Users\Usser\Descargas
 			>> clave1,calve2,clave3
 
+Eliminar:
+	
+	La lista se muestra antes de recibir una entrada para el usuario, las listas se guardan automaticamente despues de modificar. Los efectos son inmediatos
+
+	->SC: Se elige un numero de la lista mostrada anteriormente, este elemento se eliminará
+
+	->DS: Se elige un numero de la lista mostrada anteriormente, este elemento se eliminará

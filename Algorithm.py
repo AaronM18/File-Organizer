@@ -113,7 +113,6 @@ def display_dsList(ds_list):
 
 	return
 
-
 #-----------------------------  Update Files  ----------------------------------
 def update_file(dir_list, file_name):
 	path = os.path.dirname(os.path.abspath(__file__)) # obtiene la direccion del .py
@@ -134,6 +133,7 @@ def update_file(dir_list, file_name):
 		print('\n\tERROR: ' + file_name + ' couldn''t be updated...')
 
 		return
+
 #-----------------------------  ADD SRC  -----------------------------------
 def add_src(sc_list):
 
@@ -163,6 +163,7 @@ def add_ds(ds_list):
 		update_file(ds_list, 'ds.cfg')
 
 	return
+
 #-----------------------------  Delete  -----------------------------------
 def del_sc(sc_list):
 
@@ -199,27 +200,27 @@ def del_ds(ds_list):
 	return
 
 #-----------------------------  Main -------------------------------
-def main():
-	# Sc_list = source list
-	# ds_ list = destiny list
-	sc_list = []
-	ds_list = []
-
-	# carga los archivos .cfg de donde saca las listas de direcciones
-	sc_list = load_sc(sc_list)	
-	ds_list = load_ds(ds_list)
-
-	# llamada  afunciones
-	#display_scList(sc_list)
-	#display_dsList(ds_list)
-
-	#search_files(sc_list, ds_list)
-
-	#add_src(sc_list)
-	#add_ds(ds_list)
-
-	#del_sc(sc_list)
-	#del_ds(ds_list)
-#---------------------------------
-
-main()
+#def main():
+#	# Sc_list = source list
+#	# ds_ list = destiny list
+#	sc_list = []
+#	ds_list = []
+#
+#	# carga los archivos .cfg de donde saca las listas de direcciones
+#	sc_list = load_sc(sc_list)	
+#	ds_list = load_ds(ds_list)
+#
+#	# llamada  afunciones
+#	#display_scList(sc_list)
+#	#display_dsList(ds_list)
+#
+#	#search_files(sc_list, ds_list)
+#
+#	#add_src(sc_list)
+#	#add_ds(ds_list)
+#
+#	#del_sc(sc_list)
+#	#del_ds(ds_list)
+##---------------------------------
+#
+#main()
