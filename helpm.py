@@ -6,7 +6,10 @@ def help_menu():
 		
 	with open('help.txt', 'r') as fin:
 		print (fin.read())
-	while option != 'exit':
+
+	while option != 'b':
 	#{
+		print("\n\tTo go back type 'b'")
 		option = input('>> ')
+		option = option.lower()
 	#}

@@ -15,7 +15,9 @@ def clsn():
 
 def run(sc_list, ds_list):
 	
-	search_files(sc_list, ds_list)
+	if search_files(sc_list, ds_list) == 1:
+		input("\n\tFiles organized!!!!")
+		return 1
 
 	return
 
@@ -25,16 +27,18 @@ def menu_CF(sc_list, ds_list):
 
 	clsn()
 
-	while option != 'exit':
+	while option != 'b':
 	#{
-		print("\n  --------------- Source Configuration ------------\n")
+		print("\n  =================== Source Configuration ===================")
 		
-		print("\n  1. Display list")
-		print("\n  2. Add")
-		print("\n  3. Delete")
-		print("\n\tChoose an option:")
+		print("\n\t1. Display list")
+		print("\n\t2. Add")
+		print("\n\t3. Delete")
+		print("\n\tTo go back type 'b'")
+		print("\n Choose an option:\n")
 
 		option = input('>> ')
+		option = option.lower()
 
 		if option == '1':
 			clsn()
@@ -59,16 +63,18 @@ def menu_CD(sc_list, ds_list):
 
 	clsn()
 
-	while option != 'exit':
+	while option != 'b':
 	#{
-		print("\n  --------------- Destiny Configuration ------------\n")
+		print("\n  =================== Destiny Configuration ===================")
 	
-		print("\n  1. Display list")
-		print("\n  2. Add")
-		print("\n  3. Delete")
-		print("\n\tChoose an option:")
+		print("\n\t1. Display list")
+		print("\n\t2. Add")
+		print("\n\t3. Delete")
+		print("\n\tTo go back type 'b'")
+		print("\n Choose an option:\n")
 
 		option = input('>> ')
+		option = option.lower()
 
 		if option == '1':
 			clsn()
@@ -95,15 +101,16 @@ def menu_main(sc_list, ds_list):
 
 	while option != 'exit':
 	#{
-		print("\n  //////// File Orginizer \\\\\\\\\\\\\\ \n")
+		print("\n  =================== File Orginizer ===================")
 		
-		print("\n  1. Source Configuration")
-		print("\n  2. Destiny Configuration")
-		print("\n  3. Run")
-		print("\n  To exit type 'exit', for help type 'help'")
-		print("\n\tChoose an option:")
+		print("\n\t1. Source Configuration")
+		print("\n\t2. Destiny Configuration")
+		print("\n\t3. Run")
+		print("\n\tTo exit type 'exit', for help type 'help'")
+		print("\n Choose an option:\n")
 
 		option = input('>> ')
+		option = option.lower()
 
 		if option == '1':
 			menu_CF(sc_list, ds_list)
@@ -119,7 +126,7 @@ def menu_main(sc_list, ds_list):
 
 		clsn()
 	#}
-	print("\n ------ Succes ----------\n")
+	print("\n ---------- See Yaa!! ----------\n")
 
 	return
 #--------------------------------------------------------		

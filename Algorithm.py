@@ -85,6 +85,8 @@ def search_files(sc_list, ds_list):
 		except:
 			print("\n ERROR: Invalid Source folder: ", src)
 
+	return 1
+
 #-----------------------------  Display SRC List  -------------------------------
 def display_scList(sc_list):
 	i = 1
@@ -149,7 +151,7 @@ def add_src(sc_list):
 #-----------------------------  ADD DS  -----------------------------------
 def add_ds(ds_list):
 
-	print('\n Input new origin folder:')
+	print('\n Input new destiny folder:')
 	rute = input('\n\t>> ')
 
 	if os.path.isdir(rute):
