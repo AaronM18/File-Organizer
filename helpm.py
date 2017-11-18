@@ -4,7 +4,7 @@ def help_menu():
 
 	print("\n  --------------- Help ------------\n")
 		
-	with open('README.txt', 'r') as fin:
+	with open('help.txt', 'r') as fin:
 		print (fin.read())
 	while option != 'exit':
 	#{

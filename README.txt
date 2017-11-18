@@ -1,48 +1,45 @@
+
+
+==========================  File Organizer  =================================
+
+	File organizer is a tool that helps you keep your documents organized 
+	in the folders they belong. This will keep your documents in place, easy 
+	to find and your desktop and downloads free from clutter.
+
+=================== Getting Started
+
+	These instructions will get you a copy of the project up and running on 
+	your local machine. 
+
+	========== Prerequisites
+
+		Python 3.6.2
+
+	============ Installing
+
+		No installation is needed
+
+=============== Built With
+
+	Python 3.6.2
+	Sublime Text 3
+
+=============== Contributing
+	
+	Send email to:
+	for more information
 	
 
-------------------------------------------   FILE ORGANIZER  ------------------------------------------
+=============== Versioning
 
+============== Authors
 
-Funcionamiento General:
-	
-	En la carpeta data se pueden encontrar 2 archivos .cfg:
+	Aarón Mejía - Initial work 
 
-	-> sc.cfg:	guarda las rutas donde el programa va a revisar los archivos contenidos
+============== License
 
-		EJEMPLO:
-			C:\Users\Usser\Descargas
+	This project is licensed under the GNU General Public License
 
-	-> ds.cfg:	guarda las rutas donde el programa va a mover los archivos a partir de palabras clave 
-				especificas por ruta
-				Por linea debe haber una ruta con una separacion '||' entre las palabras clave separadas 
-				por una coma ','
+============= Acknowledgments
 
-		EJEMPLO:
-			C:\Users\juan\Documents\||juan,clave2,clave3
-			C:\Users\pedro\Documents\||pedro,claveA,claveB
-			C:\Users\oscar\Documents\||oscar,clave0,clave9
-
-					ruta||palabra1,palabra2,palabra3
-
-
-Agregar:
-
-	->SC: se introduce una nueva ruta de donde se van a mover archivos
-
-		EJEMPLO: 
-			>> C:\Users\Usser\Descargas
-	
-	->DS: se introduce una nueva ruta de donde se van a mover archivos, despues se pide enlistar las
-		palabras clave
-
-		EJEMPLO:
-			>> C:\Users\Usser\Descargas
-			>> clave1,calve2,clave3
-
-Eliminar:
-	
-	La lista se muestra antes de recibir una entrada para el usuario, las listas se guardan automaticamente despues de modificar. Los efectos son inmediatos
-
-	->SC: Se elige un numero de la lista mostrada anteriormente, este elemento se eliminará
-
-	->DS: Se elige un numero de la lista mostrada anteriormente, este elemento se eliminará
+	Saenz! :*
